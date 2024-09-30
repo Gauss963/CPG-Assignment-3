@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Fortran",
+            "type": "shell",
+            "command": "gfortran",
+            "args": [
+                "-o",
+                "LinearRegression",                       // Otuput executable
+                "LinearRegression.f90",               // Main code
+                "LinearRegressionRandomData.f90",              // subroutine
+                "LinearRegressionFitting.f90",         // subroutine
+                "LinearRegressionReadData.f90"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
