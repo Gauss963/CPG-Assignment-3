@@ -2,21 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Fortran",
+            "label": "Build Fortran (Flang)",
             "type": "shell",
-            "command": "gfortran",
+            "command": "conda",
             "args": [
-                "-o",
-                "LinearRegression",                       // Otuput executable
-                "LinearRegression.f90",               // Main code
-                "LinearRegressionRandomData.f90",              // subroutine
-                "LinearRegressionFitting.f90",         // subroutine
+                "run", "-n", "Flang",
+                "flang", "-O2",
+                "-o", "LinearRegression",
+                "LinearRegression.f90",
+                "LinearRegressionRandomData.f90",
+                "LinearRegressionFitting.f90",
                 "LinearRegressionReadData.f90"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "bash",
+            "args": ["-lc", "rm -f LinearRegression *.o *.mod"],
             "problemMatcher": []
         }
     ]

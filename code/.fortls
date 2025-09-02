@@ -1,0 +1,6 @@
+{
+  "use_signature_help": true,
+  "hover_signature": true,
+  "enable_code_actions": true,
+  "source_dirs": ["./**"]
+}

@@ -1,0 +1,8 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": [],
+    "fortran.fortls.path": "/opt/homebrew/Caskroom/miniconda/base/envs/Flang/bin/fortls",
+    "fortran.linter.compiler": "Disabled",
+    "fortran.provide.symbols": "fortls"
+}
